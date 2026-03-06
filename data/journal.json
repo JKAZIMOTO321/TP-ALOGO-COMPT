@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2026-03-06",
+        "numero": 1,
+        "operation": "Obtention d'un emprunt bancaire",
+        "compte": "52",
+        "debit": 30000.0,
+        "credit": 0
+    },
+    {
+        "date": "2026-03-06",
+        "numero": 1,
+        "operation": "Obtention d'un emprunt bancaire",
+        "compte": "16",
+        "debit": 0,
+        "credit": 30000.0
+    }
+]
