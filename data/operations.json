@@ -1,0 +1,345 @@
+[
+  {
+    "id": 1,
+    "nom": "Apport de capital par virement",
+    "categorie": "Constitution",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant_apport"],
+    "ecritures": [
+      {"compte": "521", "sens": "debit", "montant": "montant_apport"},
+      {"compte": "101", "sens": "credit", "montant": "montant_apport"}
+    ]
+  },
+  {
+    "id": 2,
+    "nom": "Obtention d'un emprunt bancaire",
+    "categorie": "Financement",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant_emprunt"],
+    "ecritures": [
+      {"compte": "52", "sens": "debit", "montant": "montant_emprunt"},
+      {"compte": "16", "sens": "credit", "montant": "montant_emprunt"}
+    ]
+  },
+  {
+    "id": 3,
+    "nom": "Dépôt de garantie pour loyer",
+    "categorie": "Investissement",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant_caution"],
+    "ecritures": [
+      {"compte": "275", "sens": "debit", "montant": "montant_caution"},
+      {"compte": "52", "sens": "credit", "montant": "montant_caution"}
+    ]
+  },
+  {
+    "id": 4,
+    "nom": "Retrait de la banque pour la caisse",
+    "categorie": "Trésorerie",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "585", "sens": "debit", "montant": "montant"},
+      {"compte": "52", "sens": "credit", "montant": "montant"},
+      {"compte": "57", "sens": "debit", "montant": "montant"},
+      {"compte": "585", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 5,
+    "nom": "Achat de matériel informatique",
+    "categorie": "Investissement",
+    "nature": "Bilan",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "2442", "sens": "debit", "montant": "HT"},
+      {"compte": "4451", "sens": "debit", "montant": "TVA"},
+      {"compte": "404", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 6,
+    "nom": "Achat de mobilier de bureau",
+    "categorie": "Investissement",
+    "nature": "Bilan",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "2444", "sens": "debit", "montant": "HT"},
+      {"compte": "4451", "sens": "debit", "montant": "TVA"},
+      {"compte": "404", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 7,
+    "nom": "Acquisition d'un logiciel professionnel",
+    "categorie": "Investissement",
+    "nature": "Bilan",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "213", "sens": "debit", "montant": "HT"},
+      {"compte": "4451", "sens": "debit", "montant": "TVA"},
+      {"compte": "404", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 8,
+    "nom": "Achat de marchandises à crédit",
+    "categorie": "Achat",
+    "nature": "Charge",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "601", "sens": "debit", "montant": "HT"},
+      {"compte": "4452", "sens": "debit", "montant": "TVA"},
+      {"compte": "401", "sens": "credit", "montant": "TTC"},
+      {"compte": "31", "sens": "debit", "montant": "HT"},
+      {"compte": "6031", "sens": "credit", "montant": "HT"}
+    ]
+  },
+  {
+    "id": 9,
+    "nom": "Paiement du loyer par chèque",
+    "categorie": "Services",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant_loyer"],
+    "ecritures": [
+      {"compte": "622", "sens": "debit", "montant": "montant_loyer"},
+      {"compte": "52", "sens": "credit", "montant": "montant_loyer"}
+    ]
+  },
+  {
+    "id": 10,
+    "nom": "Facture d'eau et électricité",
+    "categorie": "Services",
+    "nature": "Charge",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "605", "sens": "debit", "montant": "HT"},
+      {"compte": "4454", "sens": "debit", "montant": "TVA"},
+      {"compte": "52", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 11,
+    "nom": "Frais de transport sur achats",
+    "categorie": "Transport",
+    "nature": "Charge",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "61", "sens": "debit", "montant": "HT"},
+      {"compte": "4453", "sens": "debit", "montant": "TVA"},
+      {"compte": "52", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 12,
+    "nom": "Paiement prime d'assurance",
+    "categorie": "Services",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "625", "sens": "debit", "montant": "montant"},
+      {"compte": "52", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 13,
+    "nom": "Entretien et réparation matériel",
+    "categorie": "Services",
+    "nature": "Charge",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "624", "sens": "debit", "montant": "HT"},
+      {"compte": "4454", "sens": "debit", "montant": "TVA"},
+      {"compte": "52", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 14,
+    "nom": "Honoraires de l'expert-comptable",
+    "categorie": "Services",
+    "nature": "Charge",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "6324", "sens": "debit", "montant": "HT"},
+      {"compte": "4454", "sens": "debit", "montant": "TVA"},
+      {"compte": "52", "sens": "credit", "montant": "TTC"}
+    ]
+  },
+  {
+    "id": 15,
+    "nom": "Vente de marchandises à crédit",
+    "categorie": "Vente",
+    "nature": "Produit",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "411", "sens": "debit", "montant": "TTC"},
+      {"compte": "701", "sens": "credit", "montant": "HT"},
+      {"compte": "4431", "sens": "credit", "montant": "TVA"},
+      {"compte": "31", "sens": "credit", "montant": "HT"},
+      {"compte": "6031", "sens": "debit", "montant": "HT"}
+    ]
+  },
+  {
+    "id": 16,
+    "nom": "Vente de marchandises au comptant (Caisse)",
+    "categorie": "Vente",
+    "nature": "Produit",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "571", "sens": "debit", "montant": "TTC"},
+      {"compte": "701", "sens": "credit", "montant": "HT"},
+      {"compte": "4431", "sens": "credit", "montant": "TVA"},
+      {"compte": "6031", "sens": "debit", "montant": "HT"},
+      {"compte": "31", "sens": "credit", "montant": "HT"}
+    ]
+  },
+  {
+    "id": 17,
+    "nom": "Prestation de services facturée",
+    "categorie": "Vente",
+    "nature": "Produit",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht", "taux_tva"],
+    "ecritures": [
+      {"compte": "411", "sens": "debit", "montant": "TTC"},
+      {"compte": "706", "sens": "credit", "montant": "HT"},
+      {"compte": "4432", "sens": "credit", "montant": "TVA"}
+    ]
+  },
+  {
+    "id": 18,
+    "nom": "RRR accordé(es) sur vente (Avoir client)",
+    "categorie": "Vente",
+    "nature": "Produit",
+    "type_tva": "avec_tva",
+    "champs": ["montant_ht"],
+    "ecritures": [
+      {"compte": "6019", "sens": "debit", "montant": "HT"},
+      {"compte": "411", "sens": "credit", "montant": "HT"}
+    ]
+  },
+  {
+    "id": 19,
+    "nom": "Comptabilisation des salaires bruts",
+    "categorie": "Personnel",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant_brut"],
+    "ecritures": [
+      {"compte": "661", "sens": "debit", "montant": "montant_brut"},
+      {"compte": "422", "sens": "credit", "montant": "montant_brut"}
+    ]
+  },
+  {
+    "id": 20,
+    "nom": "Paiement d'une dette fournisseur",
+    "categorie": "Trésorerie",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "401", "sens": "debit", "montant": "montant"},
+      {"compte": "52", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 21,
+    "nom": "Réception d'un chèque client",
+    "categorie": "Trésorerie",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "52", "sens": "debit", "montant": "montant"},
+      {"compte": "411", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 22,
+    "nom": "Paiement des charges sociales (CNSS/INSS)",
+    "categorie": "Personnel",
+    "nature": "Bilan",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "431", "sens": "debit", "montant": "montant"},
+      {"compte": "52", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 23,
+    "nom": "Versement d'impôts directs (Patente)",
+    "categorie": "Etat",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "641", "sens": "debit", "montant": "montant"},
+      {"compte": "52", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 24,
+    "nom": "Intérêts bancaires débités",
+    "categorie": "Trésorerie",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "52", "sens": "debit", "montant": "montant"},
+      {"compte": "774", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 25,
+    "nom": "Dotation aux amortissements matériel",
+    "categorie": "Inventaire",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "681", "sens": "debit", "montant": "montant"},
+      {"compte": "28441", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 26,
+    "nom": "Dotation aux amortissements mobilier",
+    "categorie": "Inventaire",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "681", "sens": "debit", "montant": "montant"},
+      {"compte": "28442", "sens": "credit", "montant": "montant"}
+    ]
+  },
+  {
+    "id": 27,
+    "nom": "Dotation aux amortissements logiciel",
+    "categorie": "Inventaire",
+    "nature": "Charge",
+    "type_tva": "sans_tva",
+    "champs": ["montant"],
+    "ecritures": [
+      {"compte": "681", "sens": "debit", "montant": "montant"},
+      {"compte": "2813", "sens": "credit", "montant": "montant"}
+    ]
+  }
+]
